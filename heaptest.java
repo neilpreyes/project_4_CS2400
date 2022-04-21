@@ -29,6 +29,14 @@ public class heaptest {
          */
 
         System.out.println("Heap built using optimal method: " + Arrays.toString(heapTest.getFirstTen()));
+        try {
+            FileWriter myWriter = new FileWriter("Output.txt");
+            myWriter.write(Arrays.toString(heapTest.getFirstTen()));
+            myWriter.close();
+          } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         System.out.println("Number of swaps in the heap creation: " + heapTest.getCountHeap());
         for (int j = 0; j < 10; j++){
             int remove = heapTest.removeMax();
@@ -48,9 +56,6 @@ public class heaptest {
             int remove = heapTest2.removeMax();
         }
         System.out.println("Heap after 10 removals: " + Arrays.toString(heapTest2.getFirstTen()));
-
-
-
     }
 
 }
