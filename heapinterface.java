@@ -6,6 +6,6 @@ public interface heapinterface {
     public boolean isEmpty();
     public int getSize();
     public void clear();
-    public void heapify(int rootIndex);
+    public void reheap(int rootIndex);
 
 }
