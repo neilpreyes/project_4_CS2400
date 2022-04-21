@@ -194,7 +194,7 @@ public class heap implements heapinterface{
         int[] arr = heapCopy();
 
         for(int i = 1; i < 10; i++){
-            firstTen[i] = arr[i];
+            firstTen[i-1] = arr[i];
  
         }
 
